@@ -11,7 +11,8 @@ def run():
             video_info = youtube_dl.YoutubeDL().extract_info(
                 url = video_url,download=False
             )
-            filename = f"output\\{video_info['title']}.mp3"
+            title = video_info['title'].replace("/", " | ").replace("\\", "| ")
+            filename = f"output\\{title}.mp3"
             options={
                 'format':'bestaudio/best',
                 'keepvideo':False,

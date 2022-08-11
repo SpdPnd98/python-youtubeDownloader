@@ -1,2 +1,3 @@
 # ignore all downloaded mp3 files
 *.mp3
+*.part
